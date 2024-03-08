@@ -1,0 +1,122 @@
+*{
+  margin: 0;
+  padding: 0;  
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    min-height: 100vh;
+    background: linear-gradient(185deg, #2b9ee0, #cf7492 );
+    padding: 10px;
+}
+
+.todo-app{
+    max-width: 545px;
+    background-color: #d8e8df;
+    margin: 100px auto;
+    padding: 40px 30px 50px;
+    border-radius: 5px;
+}
+
+.todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.todo-app h2 img{
+    width: 35px;
+    margin-left: 10px;
+}
+
+.todo-app:hover{
+    box-shadow: 1px 2px 2px 3px rgb(219, 134, 100);
+}
+
+.row{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ background-color: #efe2e2;
+ border-radius: 10px;
+ margin-bottom: 20px;
+}
+
+input{
+    flex: 1px;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 15px;
+}
+
+button{
+border: none;
+outline: none;
+padding: 16px 50px;
+color: #fff;
+font-size: 16px;
+cursor: pointer;
+background-color: forestgreen;
+border-radius: 10px;
+}
+
+button:hover{
+    background-color:aqua;
+}
+
+ul li{    
+    list-style: none;
+    position: relative;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    position: relative;
+
+}
+
+ul li::before{
+ content: '';
+ position: absolute;
+ height: 28px;
+ width: 28px;
+ border-radius: 50%;
+ background-image: url(images/unchecked.png);
+ background-size: cover;
+ background-position: center;
+ top: 8px;
+ left: 16px;
+}
+
+ul li.checked{
+    color: dimgray;
+    text-decoration: line-through;
+
+
+}
+
+ul li.checked::before{
+    color: #666;
+    background-image: url(images/checked.png);
+
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background-color:rgb(199, 236, 194);
+}
